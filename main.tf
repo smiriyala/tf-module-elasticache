@@ -18,7 +18,7 @@ resource "aws_elasticache_cluster" "elasticache" {
 
 ##Elasticache SubnetGroup for Elastic Cache
 resource "aws_elasticache_subnet_group" "main" {
-  name       =  "${var.env}-elasticache"
+  name       =  "${var.env}-rds"
   subnet_ids = var.subnet_ids
 
   tags = merge(
