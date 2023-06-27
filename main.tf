@@ -25,4 +25,7 @@ resource "aws_elasticache_subnet_group" "main" {
     var.tags,
     { Name = "${var.env}-subnet-group" }
   )
+  lifecycle {
+    create_before_destroy = true
+  }
 }
