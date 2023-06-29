@@ -51,7 +51,7 @@ resource "aws_security_group" "main" {
     from_port   = 6379
     to_port     = 6379
     protocol    = "tcp"
-    cidr_blocks = var.allow_subnets
+    cidr_blocks = [var.allow_subnets]
   }
 
   egress {
